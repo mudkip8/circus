@@ -62,20 +62,22 @@ public class Circus {
         animalArrayList.add(strongOne);
 
         printAllAnimals(animalArrayList);
+        animalArrayList.sort(Animal.AnimalNameComparator);
+        printAllAnimals(animalArrayList);
 
-        Cage<Duck> duckCage = new Cage<>();
-        Duck duck = new Duck("duckie");
-        duckCage.lockUp(duck);
-        Parrot parrot = new Parrot("parrotie");
-        Cage<Parrot> parrotCage = new Cage<>();
-        parrotCage.lockUp(parrot);
-
-        ArrayList<Cage> cages = new ArrayList<>();
-        cages.add(duckCage);
-        cages.add(parrotCage);
-
-        for(Cage c: cages) {
-            c.release();
-        }
+//        Cage<Duck> duckCage = new Cage<>();
+//        Duck duck = new Duck("duckie");
+//        duckCage.lockUp(duck);
+//        Parrot parrot = new Parrot("parrotie");
+//        Cage<Parrot> parrotCage = new Cage<>();
+//        parrotCage.lockUp(parrot);
+//
+//        ArrayList<Cage> cages = new ArrayList<>();
+//        cages.add(duckCage);
+//        cages.add(parrotCage);
+//
+//        for(Cage c: cages) {
+//            c.release();
+//        }
     }
 }
